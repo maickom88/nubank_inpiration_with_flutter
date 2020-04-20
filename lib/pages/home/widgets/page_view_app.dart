@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_app/pages/home/widgets/first_card.dart';
 import 'card_app.dart';
 
 
@@ -26,7 +27,9 @@ class PageViewApp extends StatelessWidget {
           onPageChanged: onChanged,
           physics: showMenu ? NeverScrollableScrollPhysics() : BouncingScrollPhysics(),
           children: <Widget>[
-            CardApp(),
+            CardApp(
+              child: FirstCard(),
+            ),
             CardApp(),
             CardApp(),
           ],
